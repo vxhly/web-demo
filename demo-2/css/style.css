@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin: 0px;padding: 0px;}
+body,html,.main{
+    width: 100%;
+    height: 100%;
+}
+.main{
+    background-image: url("../images/mhrf-dspd42372f10.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: fixed;
+}
+.main .pic{
+    width: 850px;
+    height: 160px;
+    margin: 150px auto;
+    background: rgba(255,255,255,0.3);
+    position: relative;
+    overflow: hidden;
+}
+.pic ul{
+    width: 1700px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    -webkit-animation: play 10s linear infinite;/*linear：匀速运动；infinite：无限运动*/
+}
+.pic ul:hover{
+    -webkit-animation-play-state:paused;
+}
+.pic ul li{
+    width: 160px;
+    height: 140px;
+    list-style-type: none;
+    float: left;
+    margin: 10px 5px;
+    cursor: pointer;
+}
+.pic ul li img{
+    width: 160px;
+    height: 140px;
+}
+@-webkit-keyframes play{
+    from{left: 0px;}
+    to{left: -850px;}
+}

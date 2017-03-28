@@ -4,8 +4,8 @@
 
 > 成功
 
-![demo-1](https://github.com/vxhly/web-demo/demo-1/blob/master/images/demo-1.png)
+![demo-1](https://github.com/vxhly/web-demo/blob/master/demo-1/images/demo-1-1.png)
 
 > 失败
 
-![demo-1](https://github.com/vxhly/web-demo/demo-1/blob/master/images/demo-.png)
+![demo-1](https://github.com/vxhly/web-demo/blob/master/demo-1/images/demo-1-2.png)
