@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0px;padding:0px;}
+html{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+body{
+    background-image: url("../images/2.jpg");
+    background-position: center;
+    background-size: cover;
+    font-family: "微软雅黑";
+}
+.menu{
+    width: 200px;
+    height: 250px;
+    background: #fff;
+    box-shadow: 0px 0px 10px #fff;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    display: none;
+}
+.menu ul li{
+    width: 200px;
+    height: 35px;
+    list-style-type: none;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    color: #666;
+    line-height: 35px;
+    text-indent: 20px;
+    cursor: pointer;
+}
+.menu ul li img{
+    margin-right: 20px;
+}
+.menu ul li:hover{
+    background-color: #000;
+    color: #fff;
+}
+.bg{
+    width: 730px;
+    height: 360px;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+    transform: scale(0) rotate(0deg);/*缩放,旋转*/
+    transition: all 1s;
+}
+.opt{transform: scale(1) rotate(360deg);}
+.bg .title{
+    width: 730px;
+    height: 46px;
+    background-image: url("../images/title_bg.jpg");
+    color: #fff;
+    font-size: 18px;
+    line-height: 46px;
+    text-indent: 10px;
+    cursor: pointer;
+}
+.bg .title .close{
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.bg ul li{
+    list-style-type: none;
+    float: left;
+    width: 200px;
+    height: 125px;
+    border: 5px solid #fff;
+    margin: 10px 16px;
+    cursor: pointer;
+}
