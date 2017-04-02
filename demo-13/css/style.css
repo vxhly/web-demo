@@ -1,0 +1,117 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ul li {
+	list-style-type: none;
+}
+/*清楚无序列表的小黑点*/
+a {
+	text-decoration: none;
+	/*清楚超链接的下划线*/
+	color: #FFF;
+}
+
+body {
+	background: url(../images/bg.png)repeat;
+	/*重复平铺图像*/
+}
+/*以id命名的盒子，定义要以#号打头，并称其的css样式为ID选择器；以class命名的盒子，定义要以.号打头,并称其的css样式为类选择器*/
+#con {
+	width: 500px;
+	height: auto;
+	margin: 0 auto;
+	/*外边距的上下为0、左右atuo，即居中；margin后面跟一个值时，是设上下左右都为同一个值；margin后面跟两个值时，是设上下、左右的值；margin后面跟三个值时，是设上、左右、下的值；margin后面跟四个值时，是设上、右、下、左的值*/
+	font-family: "微软雅黑";
+	/*设置字体*/
+	margin-top: 50px;
+	/*让div往下移动50px*/
+}
+
+.list {
+	padding: 10px 0;
+}
+/*内边距的上下为10、左右为0；padding后面跟一个值时，是设上下左右都为同一个值；padding后面跟两个值时，是设上下、左右的值；padding后面跟三个值时，是设上、左右、下的值；padding后面跟四个值时，是设上、右、下、左的值*/
+.list h2 {
+	margin: 5px 0;
+}
+/*外边距的上下为5、左右为0；margin后面跟一个值时，是设上下左右都为同一个值；margin后面跟两个值时，是设上下、左右的值；margin后面跟三个值时，是设上、左右、下的值；margin后面跟四个值时，是设上、右、下、左的值*/
+.list a {
+	background: rgba(0,0,0,.3);
+	/*对背景灰度和透明度的定义*/
+	display: block;
+	/*block元素将显示为块级元素，此元素前后会带有换行符，把一个没有宽高的元素变成有宽高；对于div元素，给它宽高可以直接显示出来；但是对于内联元素，给它宽高不会显示出来，只会显示内容区域及内容的宽高，所以要用到display:block进行转化*/
+	padding: 10px 5px;
+	/*上下为10像素，左右为5像素；padding后面跟一个值时，是设上下左右都为同一个值；padding后面跟两个值时，是设上下、左右的值；padding后面跟三个值时，是设上、左右、下的值；padding后面跟四个值时，是设上、右、下、左的值*/
+	border-radius: 8px;
+	/*给一个8像素的圆角边框；要先有display:block具有宽高的块，才能在对这个块添加一个圆角边框，只给一个方向，就说明四个方向都是同一个像素*/
+}
+
+#t2 p,
+#t3 p,
+.list #t1 p {
+	height: 0;
+	/*不给高度也就不会显示图像*/
+	overflow: hidden;
+	/*超出隐藏*/
+	border-radius: 8px;
+	/*给一个8像素的圆角边框；要先有display:block具有宽高的块，才能在对这个块添加一个圆角边框；只给一个像素，就说明四个方向都是同一个像素*/
+	position: relative;
+	/*生成相对定位的元素，相对于其正常位置进行定位,position 属性的默认值：static，作为span标签定位的参考对象*/
+	transition: all 1.5s linear;
+	/*给一个过渡的时间*/
+}
+
+.list #t1 p {
+	background: url("../images/1.jpg") no-repeat;
+	/*不重复平铺图像*/
+}
+
+.list #t2 p {
+	background: url("../images/2.jpg") no-repeat;
+	/*不重复平铺图像*/
+}
+
+.list #t3 p {
+	background: url("../images/3.jpg") no-repeat;
+	/*不重复平铺图像*/
+}
+
+.list span {
+	display: block;
+	/*把一个没有宽高的元素变成有宽高，对于块元素，给它宽高可以直接显示出来；但是对于内源元素，给它宽高不会显示出来，只会显示内容区域及内容的宽高，所以要用到display:block进行转化*/
+	width: 500px;
+	position: absolute;
+	/*生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位,position 属性的默认值：static*/
+	bottom: 0;
+	/*下部为0，贴紧背景图像的底部*/
+	left: 0;
+	/*左边为0，贴紧背景图像的左边*/
+	color: #FFF;
+	height: 35px;
+	/*文字层的高度*/
+	line-height: 35px;
+	/*文字垂直*/
+	background: #000;
+	filter:alpha(opacity=50);
+	/*滤镜，解决某些浏览器对rgba的不兼容问题*/
+	background: rgba(0,0,0,.5);
+	/*对背景灰度和透明度的定义*/
+	border-bottom-left-radius: 8px;
+	/*给一个8像素的圆角边框；要先有display:block具有宽高的块，才能在对这个块添加一个圆角边；给一个底部左边8像素的圆角边框*/
+	border-bottom-right-radius: 8px;
+	/*给一个8像素的圆角边框；要先有display:block具有宽高的块，才能在对这个块添加一个圆角边；给一个底部右边8像素的圆角边框*/
+	padding: 10px 5px;
+	/*上下为10像素，左右为5像素；padding后面跟一个值时，是设上下左右都为同一个值；padding后面跟两个值时，是设上下、左右的值；padding后面跟三个值时，是设上、左右、下的值；padding后面跟四个值时，是设上、右、下、左的值*/
+}
+
+#con li:target p {
+	height: 297px;
+}
+
+#con li:target #t4 p {
+	height: 0;
+}

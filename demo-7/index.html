@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<!--声明编码-->
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<!--搜索引擎优化-->
-	<meta name="Keywords" content="关键词" />
-	<meta name="Description" content="描述" />
-	<!--响应式布局-->
-	<meta name="viewport" content="width=device-width,initial-scale=1" />
-	<title>3D侧翻图片可点击轮播特效</title>
-	<!--引入外部的层叠样式表-->
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
-</head>
+	<head>
+		<!--声明编码-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<!--搜索引擎优化-->
+		<meta name="Keywords" content="关键词" />
+		<meta name="Description" content="描述" />
+		<!--响应式布局-->
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>3D侧翻图片可点击轮播特效</title>
+		<!--引入外部的层叠样式表-->
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
 
-<body>
-	<div id="banner">
-		<div id="pic">
-			<ul class="img">
-				<li class="big"></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
+	<body>
+		<div id="banner">
+			<div id="pic">
+				<ul class="img">
+					<li class="big"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<div id="nav">
+				<div class="left" onClick="left()" title="上一张,点击可以停止自动轮播"></div>
+				<div class="txt">1/6</div>
+				<div class="right" onClick="auto()" title="下一张,再次点击可以开始自动轮播"></div>
+			</div>
 		</div>
-		<div id="nav">
-			<div class="left" onClick="left()" title="上一张,点击可以停止自动轮播"></div>
-			<div class="txt">1/6</div>
-			<div class="right" onClick="auto()" title="下一张,再次点击可以开始自动轮播"></div>
-		</div>
-	</div>
-	<!--引用jquery 类库-->
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<!--引入外部的js文件-->
-	<script type="text/javascript" src="js/game.js"></script>
-</body>
+		<!--引用jquery 类库-->
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<!--引入外部的js文件-->
+		<script type="text/javascript" src="js/game.js"></script>
+	</body>
 
 </html>
