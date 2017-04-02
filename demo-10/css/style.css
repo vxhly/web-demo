@@ -1,0 +1,84 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+din#bigimg {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	/*生成绝对定位的元素，相对于浏览器窗口进行定位。*/
+	top: 0;
+	left: 0;
+}
+
+div#xc {
+	width: 570px;
+	height: 450px;
+	background: rgb(0,0,0,0.5);
+	/*设置透明背景*/
+	position: absolute;
+	/*生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位,position 属性的默认值：static*/
+	left: 430px;
+	top: 100px;
+	box-shadow: 0 0 20px #fff;
+	/*设置阴影效果；box-shadow:水平偏移 竖直偏移 半径 颜色*/
+}
+
+div#xc div.title {
+	width: 570px;
+	height: 46px;
+	background: url("../images/title_bg.jpg");
+	color: #fff;
+	font-family: "微软雅黑";
+	text-indent: 30px;
+	/*首行缩进30px*/
+	line-height: 46px;
+	/*设置行高，即可垂直居中*/
+}
+
+div#xc img.close {
+	float: right;
+	/*浮动居右*/
+	margin: 10px 10px 0 0;
+	/*设置外边距的上边距为10px，左边距为10px，下边距为0px，右边距为0px；；margin后面跟一个值时，是设上下左右都为同一个值；margin后面跟两个值时，是设上下、左右的值；margin后面跟三个值时，是设上、左右、下的值；margin后面跟四个值时，是设上、右、下、左的值*/
+}
+
+div#xc ul li {
+	list-style-type: none;
+	/*清楚无序列表的小黑点*/
+	width: 150px;
+	height: 105px;
+	border: 5px solid #fff;
+	float: left;
+	/*浮动居左*/
+	margin: 10px 15px;
+	/*外边距的上下边距为10px，左右边距为25px；0px；；margin后面跟一个值时，是设上下左右都为同一个值；margin后面跟两个值时，是设上下、左右的值；margin后面跟三个值时，是设上、左右、下的值；margin后面跟四个值时，是设上、右、下、左的值*/
+}
+
+div.but {
+	width: 100%;
+	height: 62px;
+	background: url("../images/nav-bg.png");
+	position: absolute;
+	/*生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位,position 属性的默认值：static*/
+	left: 0;
+	bottom: 0;
+}
+
+div.but div.con {
+	width: 230px;
+	height: 62px;
+	margin: 0 auto;
+	/*外边距的上下边距为0px，左右为auto；；margin后面跟一个值时，是设上下左右都为同一个值；margin后面跟两个值时，是设上下、左右的值；margin后面跟三个值时，是设上、左右、下的值；margin后面跟四个值时，是设上、右、下、左的值*/
+	padding-top: 10px;
+	/*内边距的上边距为10px*/
+}
+
+div#xc img,
+div.con img {
+	cursor: pointer;
+	/*当鼠标移上去时，鼠标变成手行*/
+}

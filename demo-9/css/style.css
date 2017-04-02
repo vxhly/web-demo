@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	margin: 0;
+	padding: 0;
+}
+/*以id命名的盒子，定义要以#号打头，并称其的css样式为ID选择器；以class命名的盒子，定义要以.号打头,并称其的css样式为类选择器*/
+body {
+	background: url("../images/bg.jpg") center top;
+	/*规定背景图像居中且位置是在头部的中间*/
+}
+
+div.pic {
+	width: 1100px;
+	height: 430px;
+	margin: 170px auto 0;
+	/*外边距的上边距为170px，左右auto，下边距为0px；margin后面跟一个值时，是设上下左右都为同一个值；margin后面跟两个值时，是设上下、左右的值；margin后面跟三个值时，是设上、左右、下的值；margin后面跟四个值时，是设上、右、下、左的值*/
+}
+
+div.pic ul li {
+	list-style-type: none;
+	/*清楚无序列表的小黑点*/
+	width: 100px;
+	height: 429px;
+	float: left;
+}
+
+div.pic .l1 {
+	background-image: url("../images/1.jpg");
+}
+
+div.pic .l2 {
+	background-image: url("../images/2.jpg");
+}
+
+div.pic .l3 {
+	background-image: url("../images/3.jpg");
+}
+
+div.pic .l4 {
+	background-image: url("../images/4.jpg");
+	width: 789px;
+}
+
+div.pic div.text {
+	width: 100px;
+	height: 429px;
+	background: rgba(0,0,0,0.5);
+	/*对背景灰度和透明度的定义*/
+}
+
+div.text p {
+	color: #FFF;
+	font-family: "微软雅黑";
+	float: left;
+	/*浮动居左*/
+	position: relative;
+	/*生成相对定位的元素，相对于其正常位置进行定位,position 属性的默认值：static，作为span标签定位的参考对象*/
+}
+
+div.text p.p1 {
+	font-size: 12px;
+	width: 12px;
+	margin: 25px 15px 0 20px;
+	/*外边距的上边距为25px，左边距0px，下边距为0px，左边距为20px；margin后面跟一个值时，是设上下左右都为同一个值；margin后面跟两个值时，是设上下、左右的值；margin后面跟三个值时，是设上、左右、下的值；margin后面跟四个值时，是设上、右、下、左的值*/
+}
+
+div.text p.p2 {
+	font-size: 14px;
+	width: 14px;
+	margin-top: 25px;
+	/*外边距的上边距为25px*/
+}

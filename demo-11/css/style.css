@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+    margin: 0;
+    padding: 0;
+}
+/*阿里图标使用*/
+@font-face {
+    font-family: 'iconfont';
+    src: url('../iconfont/iconfont.eot');
+    /* IE9*/
+    src:url('../iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */
+    url('../iconfont/iconfont.woff') format('woff'),
+    /* chrome、firefox */
+    url('../iconfont/iconfont.ttf') format('truetype'),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url( 'iconfont.svg#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    /*!important拥有最高优先样式*/
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    left: -12px;
+    color: #fb88af;
+    display: none;
+}
+
+#Menu {
+    width: 990px;
+    height: 270px;
+    margin: 50px auto;
+    box-shadow: 0 0 15px #000;
+    /*盒子阴影，第一个值为在X轴的偏移量，第二个值为在Y轴的偏移量，第三个值为模糊半径*/
+    padding: 15px;
+}
+
+#Menu .Con {
+    width: 740px;
+    height: 270px;
+    background: #ccff99;
+    float: left;
+    overflow: hidden;
+}
+
+#Menu .Nav {
+    width: 230px;
+    height: 270px;
+    background: #cc66ff;
+    float: right;
+}
+
+#Menu .Nav ul li {
+    width: 230px;
+    height: 45px;
+    list-style-type: none;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    text-align: center;
+    line-height: 44px;
+    border-bottom: 1px dotted #ddd;
+    position: relative;
+    cursor: pointer;
+}
+
+#Menu .Nav ul li.hover {
+    background: #fb88af;
+    color: #fff;
+}
+
+#Menu .Nav ul li.hover .iconfont {
+    display: block;
+}
+
+#Menu .Con .Content {
+    width: 740px;
+    height: 270px;
+}

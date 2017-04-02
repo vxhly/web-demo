@@ -1,0 +1,444 @@
+/**
+	flex.css
+	@ vesion: 2.2;
+	@ author: 欧鹏程;
+	@ information: Flex布局，可以简便、完整、响应式地实现各种页面布局。目前，它已经得到了所有浏览器的支持;
+	@ flex: Flex是Flexible Box的缩写，意为"弹性布局"，用来为盒状模型提供最大的灵活性。
+	@ 兼容性: 浏览器对最新版本的flexbox 的支持情况如下：
+				Chrome 29+
+				Firefox 28+
+				Internet Explorer 11+
+				Opera 17+
+				Safari 6.1+ (prefixed with -webkit-)
+				Android 4.4+
+				iOS 7.1+ (prefixed with -webkit-)
+	@ log:  v1.0 无浏览器兼容前缀，但也可以兼容大部分浏览器
+					v2.0 添加浏览器兼容性前缀，亲测手机的UC浏览器不兼容部分的写法，360浏览器的兼容模式不支持
+					v2.1 使用新旧混合写法，针对UC浏览器进行兼容性解决(不支持单项目的布局方式)
+					v2.2 添加部分属性的旧版本写法，添加 @charset 稳定编码规则
+*/
+@charset "utf-8";
+/**
+	启用flex布局，设为Flex布局以后，子元素的float、clear和vertical-align属性将失效
+*/
+.box-flex {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: flex;
+}
+
+.box-inline-flex {
+	display: -webkit-inline-flex;
+	display: -ms-inline-flexbox;
+	display: -webkit-inline-box;
+	display: inline-flex;
+}
+/**
+	容器默认存在两根轴：
+	水平的主轴（main axis）和垂直的交叉轴（cross axis）。
+	主轴的开始位置（与边框的交叉点）叫做main start，结束位置叫做main end；
+	交叉轴的开始位置叫做cross start，结束位置叫做cross end。
+	项目默认沿主轴排列。单个项目占据的主轴空间叫做main size，占据的交叉轴空间叫做cross size。
+*/
+/**
+	项目容器属性
+	@ flex-direction
+	@ flex-wrap
+	@ flex-flow
+	@ justify-content
+	@ align-items
+	@ align-content
+*/
+/**
+	@ flex-direction: row | row-reverse | column | column-reverse;
+	flex-direction属性决定主轴的方向（即项目的排列方向）。
+*/
+.dire-row {
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	flex-direction: row;
+	/* （默认值）主轴为水平方向，起点在左端。 */
+}
+
+.dire-row-rev {
+	-webkit-flex-direction: row-reverse;
+	-ms-flex-direction: row-reverse;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: reverse;
+	flex-direction: row-reverse;
+	/* 主轴为水平方向，起点在右端。 */
+}
+
+.dire-col {
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	flex-direction: column;
+	/* 主轴为垂直方向，起点在上沿。 */
+}
+
+.dire-col-rev {
+	-webkit-flex-direction: column-reverse;
+	-ms-flex-direction: column-reverse;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: reverse;
+	flex-direction: column-reverse;
+	/* 主轴为垂直方向，起点在下沿。 */
+}
+/**
+	@ flex-wrap: nowrap | wrap | wrap-reverse;
+	flex-wrap属性定义，如果一条轴线排不下，如何换行
+*/
+.wrap-now {
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	/* （默认）不换行。 */
+}
+
+.wrap-wrap {
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	/* 换行，第一行在上方。 */
+}
+
+.wrap-wrap-rev {
+	-webkit-flex-wrap: wrap-reverse;
+	-ms-flex-wrap: wrap-reverse;
+	flex-wrap: wrap-reverse;
+	/* 换行，第一行在下方。 */
+}
+/**
+	@ flex-flow: <flex-direction> || <flex-wrap>;
+	flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。
+*/
+.flow-row-now {
+	-webkit-flex-flow: row nowrap;
+	-ms-flex-flow: row nowrap;
+	flex-flow: row nowrap;
+	/* （默认）主轴为水平方向，起点在左端，不换行。 */
+}
+
+.flow-row-wrap {
+	-webkit-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	/* 主轴为水平方向，起点在左端，换行，第一行在上方。 */
+}
+
+.flow-row-wrap-rev {
+	-webkit-flex-flow: row wrap-reverse;
+	-ms-flex-flow: row wrap-reverse;
+	flex-flow: row wrap-reverse;
+	/* 主轴为水平方向，起点在左端，换行，第一行在下方。 */
+}
+
+.flow-row-rev-now {
+	-webkit-flex-flow: row-reverse nowrap;
+	-ms-flex-flow: row-reverse nowrap;
+	flex-flow: row-reverse nowrap;
+	/* 主轴为水平方向，起点在右端，不换行。 */
+}
+
+.flow-row-rev-wrap {
+	-webkit-flex-flow: row-reverse wrap;
+	-ms-flex-flow: row-reverse wrap;
+	flex-flow: row-reverse wrap;
+	/* 主轴为水平方向，起点在右端，换行，第一行在上方。 */
+}
+
+.flow-row-rev-wrap-rev {
+	-webkit-flex-flow: row-reverse wrap-reverse;
+	-ms-flex-flow: row-reverse wrap-reverse;
+	flex-flow: row-reverse wrap-reverse;
+	/* 主轴为水平方向，起点在右端，换行，第一行在下方。 */
+}
+
+.flow-col-now {
+	-webkit-flex-flow: column nowrap;
+	-ms-flex-flow: column nowrap;
+	flex-flow: column nowrap;
+	/* 主轴为垂直方向，起点在上沿。 */
+}
+
+.flow-col-wrap {
+	-webkit-flex-flow: column wrap;
+	-ms-flex-flow: column wrap;
+	flex-flow: column wrap;
+	/* 主轴为垂直方向，起点在上沿，位置是左方。 */
+}
+
+.flow-col-wrap-rev {
+	-webkit-flex-flow: column wrap-reverse;
+	-ms-flex-flow: column wrap-reverse;
+	flex-flow: column wrap-reverse;
+	/* 主轴为垂直方向，起点在上沿，位置是右方。 */
+}
+
+.flow-col-rev-now {
+	-webkit-flex-flow: column-reverse nowrap;
+	-ms-flex-flow: column-reverse nowrap;
+	flex-flow: column-reverse nowrap;
+	/* 主轴为垂直方向，起点在下沿。 */
+}
+
+.flow-col-rev-wrap {
+	-webkit-flex-flow: column-reverse wrap;
+	-ms-flex-flow: column-reverse wrap;
+	flex-flow: column-reverse wrap;
+	/* 主轴为垂直方向，起点在下沿，位置是左方。 */
+}
+
+.flow-col-rev-warp-rev {
+	-webkit-flex-flow: column-reverse wrap-reverse;
+	-ms-flex-flow: column-reverse wrap-reverse;
+	flex-flow: column-reverse wrap-reverse;
+	/* 主轴为垂直方向，起点在下沿，位置是右方。 */
+}
+/**
+	@ justify-content: flex-start | flex-end | center | space-between | space-around;
+	justify-content属性定义了项目在主轴上的对齐方式。
+*/
+.just-sta {
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: start;
+	-webkit-box-pack: start;
+	justify-content: flex-start;
+	/* （默认值）左对齐 */
+}
+
+.just-end {
+	-webkit-justify-content: flex-end;
+	-ms-flex-pack: end;
+	-webkit-box-pack: end;
+	justify-content: flex-end;
+	/* 右对齐 */
+}
+
+.just-cen {
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	-webkit-box-pack: center;
+	justify-content: center;
+	/* 居中 */
+}
+
+.just-bet {
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	/* 两端对齐，项目之间的间隔都相等。 */
+}
+
+.just-aro {
+	-webkit-justify-content: space-around;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+	/* 每个项目两侧的间隔相等。 */
+}
+/**
+	@ align-items: flex-start | flex-end | center | baseline | stretch;
+	align-items属性定义项目在交叉轴上如何对齐。
+*/
+.alig-sta {
+	-webkit-align-items: flex-start;
+	-ms-flex-align: start;
+	-webkit-box-align: start;
+	-ms-grid-row-align: flex-start;
+	align-items: flex-start;
+	/* 交叉轴的起点对齐。 */
+}
+
+.alig-end {
+	-webkit-align-items: flex-end;
+	-ms-flex-align: end;
+	-webkit-box-align: end;
+	-ms-grid-row-align: flex-end;
+	align-items: flex-end;
+	/* 交叉轴的终点对齐。 */
+}
+
+.alig-cen {
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	-webkit-box-align: center;
+	-ms-grid-row-align: center;
+	align-items: center;
+	/* 交叉轴的中点对齐。 */
+}
+
+.alig-bas {
+	-webkit-align-items: baseline;
+	-ms-flex-align: baseline;
+	-webkit-box-align: baseline;
+	-ms-grid-row-align: baseline;
+	align-items: baseline;
+	/* 项目的第一行文字的基线对齐。 */
+}
+
+.alig-str {
+	-webkit-align-items: stretch;
+	-ms-flex-align: stretch;
+	-webkit-box-align: stretch;
+	-ms-grid-row-align: stretch;
+	align-items: stretch;
+	/* （默认值）如果项目未设置高度或设为auto，将占满整个容器的高度。 */
+}
+/**
+	@ align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+	align-content属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。
+*/
+.cont-sta {
+	-ms-flex-line-pack: start;
+	-webkit-align-content: flex-start;
+	align-content: flex-start;
+	/* 与交叉轴的起点对齐。 */
+}
+
+.cont-end {
+	-ms-flex-line-pack: end;
+	-webkit-align-content: flex-end;
+	align-content: flex-end;
+	/* 与交叉轴的终点对齐。 */
+}
+
+.cont-cen {
+	-ms-flex-line-pack: center;
+	-webkit-align-content: center;
+	align-content: center;
+	/* 与交叉轴的中点对齐。 */
+}
+
+.cont-bet {
+	-ms-flex-line-pack: justify;
+	-webkit-align-content: space-between;
+	align-content: space-between;
+	/* 与交叉轴两端对齐，轴线之间的间隔平均分布。 */
+}
+
+.cont-aro {
+	-ms-flex-line-pack: distribute;
+	-webkit-align-content: space-around;
+	align-content: space-around;
+	/* 每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。 */
+}
+
+.cont-str {
+	-ms-flex-line-pack: stretch;
+	-webkit-align-content: stretch;
+	align-content: stretch;
+	/* 轴线占满整个交叉轴。 */
+}
+/**
+	项目属性
+	@ order
+	@ flex-grow
+	@ flex-shrink
+	@ flex-basis
+	@ flex
+	@ align-self
+*/
+/**
+	@ order: <integer>;
+	order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。
+*/
+.item-order-0 {
+	-webkit-order: 0;
+	-ms-flex-order: 0;
+	-webkit-box-ordinal-group: 1;
+	order: 0;
+}
+/**
+	@ flex-grow: <number>;
+	flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。
+	如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。
+*/
+.item-grow-0 {
+	-webkit-flex-grow: 0;
+	-ms-flex-positive: 0;
+	-webkit-box-flex: 0;
+	flex-grow: 0;
+}
+/**
+	@ flex-shrink: <number>;
+	flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。
+	如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。
+*/
+.item-shrink-1 {
+	-ms-flex-negative: 1;
+	-webkit-flex-shrink: 1;
+	flex-shrink: 1;
+}
+/**
+	@ flex-basis: <length> | auto;
+	flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。
+	它可以设为跟width或height属性一样的值（比如350px），则项目将占据固定空间。
+*/
+.item-basis-auto {
+	-ms-flex-preferred-size: auto;
+	-webkit-flex-basis: auto;
+	flex-basis: auto;
+}
+/**
+	@ flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+	flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。
+	该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。
+*/
+.item-flex-def {
+	-webkit-flex: 0 1 auto;
+	-ms-flex: 0 1 auto;
+	-webkit-box-flex: 0;
+	flex: 0 1 auto;
+}
+/**
+	@ align-self: auto | flex-start | flex-end | center | baseline | stretch;
+	align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。
+	目前，手机上的UC浏览器不兼容单项目的属性
+*/
+.self-auto {
+	-ms-flex-item-align: auto;
+	-webkit-align-self: auto;
+	align-self: auto;
+	/* （默认值）自动 */
+}
+
+.self-sta {
+	-ms-flex-item-align: start;
+	-webkit-align-self: flex-start;
+	align-self: flex-start;
+	/* 交叉轴的起点对齐。 */
+}
+
+.self-end {
+	-ms-flex-item-align: end;
+	-webkit-align-self: flex-end;
+	align-self: flex-end;
+	/* 交叉轴的终点对齐。 */
+}
+
+.self-cen {
+	-ms-flex-item-align: center;
+	-webkit-align-self: center;
+	align-self: center;
+	/* 与交叉轴的中点对齐。 */
+}
+
+.self-bas {
+	-ms-flex-item-align: baseline;
+	-webkit-align-self: baseline;
+	align-self: baseline;
+	/* 项目的第一行文字的基线对齐。 */
+}
+
+.self-str {
+	-ms-flex-item-align: stretch;
+	-webkit-align-self: stretch;
+	align-self: stretch;
+	/* 如果项目未设置高度或设为auto，将占满整个容器的高度。 */
+}
