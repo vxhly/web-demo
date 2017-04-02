@@ -1,0 +1,90 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+div.box {
+	width: 760px;
+	height: 300px;
+	margin: 100px auto;
+	position: relative;
+	/*生成相对定位的元素，相对于其正常位置进行定位,position 属性的默认值：static*/
+}
+
+div.box div.pic {
+	width: 760px;
+	height: 300px;
+	overflow: hidden;
+	/*超出隐藏*/
+}
+
+div.pic ul li {
+	width: 760px;
+	height: 300px;
+	list-style-type: none;
+	position: relative;
+	/*生成相对定位的元素，相对于其正常位置进行定位,position 属性的默认值：static*/
+}
+/*匹配ul下第几个li的样式；nth-child()为css3中的一个选择器*/
+div.pic ul li:nth-child(1) {
+	background-image: url("../images/bg1.jpg");
+}
+
+div.pic ul li:nth-child(2) {
+	background-image: url("../images/bg2.jpg");
+}
+
+div.pic ul li:nth-child(3) {
+	background-image: url("../images/bg3.jpg");
+}
+
+div.pic ul li:nth-child(4) {
+	background-image: url("../images/bg4.jpg");
+}
+
+div.pic ul li:nth-child(5) {
+	background-image: url("../images/bg5.jpg");
+}
+
+div.pic ul li .img1 {
+	position: absolute;
+	/*生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位,position 属性的默认值：static*/
+	top: 0;
+	left: -760px;
+}
+
+div.pic ul li .img2 {
+	position: absolute;
+	/*生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位,position 属性的默认值：static*/
+	top: 0;
+	left: -15px;
+	display: none;
+}
+
+div.nav {
+	width: 100px;
+	height: 14px;
+	position: absolute;
+	/*生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位,position 属性的默认值：static*/
+	right: 20px;
+	bottom: 10px;
+}
+
+div.nav ul li {
+	width: 12px;
+	height: 12px;
+	float: left;
+	border: 1px solid #FFF;
+	list-style-type: none;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+div.nav ul li.bd {
+	background-color: #ff7300;
+	border: none;
+	width: 14px;
+	height: 14px;
+}

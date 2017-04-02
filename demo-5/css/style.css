@@ -1,75 +1,186 @@
-﻿@charset "utf-8";
+@charset "utf-8";
 /* CSS Document */
-*{margin:0px;padding:0px;}
+* {
+	margin: 0;
+	padding: 0;
+}
 /*以id命名的盒子，定义要以#号打头，并称其的css样式为ID选择器；以class命名的盒子，定义要以.号打头,并称其的css样式为类选择器*/
-#wrap{
-	width:800px;
-	height:1000px;
-	margin:30px auto;/*上下40px，左右auto；margin后面跟一个值时，是设上下左右都为同一个值；margin后面跟两个值时，是设上下、左右的值；margin后面跟三个值时，是设上、左右、下的值；margin后面跟四个值时，是设上、右、下、左的值*/
-	}
-#wrap ul li{
-	list-style-type:none;/*清楚无序列表的小黑点*/
-	width:350px;
-	height:200px;
-	float:left;
-	margin:20px;/*上下左右设为20px；margin后面跟一个值时，是设上下左右都为同一个值；margin后面跟两个值时，是设上下、左右的值；margin后面跟三个值时，是设上、左右、下的值；margin后面跟四个值时，是设上、右、下、左的值*/
-	font-size:40px;
-	color:#fff;
-	font-weight:bold;
-	text-align:center;/*使文字水平居中*/
-	line-height:200px;/*使文字垂直居中*/
-	font-family:"微软雅黑";
-	position:relative;/*生成相对定位的元素，相对于其正常位置进行定位,position 属性的默认值：static*/
-	cursor:pointer;/*当鼠标移动到该标签时，鼠标变成手型*/
-	}
-#wrap li.l1{background:#D44825;}
-#wrap li.l2{background:#2DBAF1;}
-#wrap li.l3{background:#0CC5E7;}
-#wrap li.l4{background:#666666;}
-#wrap li.l5{background:#FF6E1A;}
-#wrap li.l6{background:#64D500;}
-#wrap li.l7{background:#00CCFF;}
-#wrap li.l8{background:#CC6600;}
-#wrap li img{
-	top:0px;
-	left:0px;
-	opacity:0;/*设置透明值*/
-	transition:0.8s;/*给一个变化的过渡的时间*/
-	position:absolute;/*生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位,position 属性的默认值：static*/
-	}
+#wrap {
+	width: 800px;
+	height: 1000px;
+	margin: 30px auto;
+	/*上下40px，左右auto；margin后面跟一个值时，是设上下左右都为同一个值；margin后面跟两个值时，是设上下、左右的值；margin后面跟三个值时，是设上、左右、下的值；margin后面跟四个值时，是设上、右、下、左的值*/
+}
+
+#wrap ul li {
+	list-style-type: none;
+	/*清楚无序列表的小黑点*/
+	width: 350px;
+	height: 200px;
+	float: left;
+	margin: 20px;
+	/*上下左右设为20px；margin后面跟一个值时，是设上下左右都为同一个值；margin后面跟两个值时，是设上下、左右的值；margin后面跟三个值时，是设上、左右、下的值；margin后面跟四个值时，是设上、右、下、左的值*/
+	font-size: 40px;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	/*使文字水平居中*/
+	line-height: 200px;
+	/*使文字垂直居中*/
+	font-family: "微软雅黑";
+	position: relative;
+	/*生成相对定位的元素，相对于其正常位置进行定位,position 属性的默认值：static*/
+	cursor: pointer;
+	/*当鼠标移动到该标签时，鼠标变成手型*/
+}
+
+#wrap li.l1 {
+	background: #D44825;
+}
+
+#wrap li.l2 {
+	background: #2DBAF1;
+}
+
+#wrap li.l3 {
+	background: #0CC5E7;
+}
+
+#wrap li.l4 {
+	background: #666666;
+}
+
+#wrap li.l5 {
+	background: #FF6E1A;
+}
+
+#wrap li.l6 {
+	background: #64D500;
+}
+
+#wrap li.l7 {
+	background: #00CCFF;
+}
+
+#wrap li.l8 {
+	background: #CC6600;
+}
+
+#wrap li img {
+	top: 0;
+	left: 0;
+	opacity: 0;
+	/*设置透明值*/
+	transition: 0.8s;
+	/*给一个变化的过渡的时间*/
+	position: absolute;
+	/*生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位,position 属性的默认值：static*/
+}
 /*当鼠标移动上去时发生的变化，hover是css中的一个伪类*/
-#wrap li img:hover{opacity:1;/*设置透明值*/}
+#wrap li img:hover {
+	opacity: 1;
+	/*设置透明值*/
+}
 /*当鼠标移动到li上时执行动画*/
 /*#wrap li:hover{-webkit-animation:sca 0.8s;}*/
 /*一段左右摇摆的css3动画，定义一个名为rot的关键帧*/
-@-webkit-keyframes rot{
-	0%,20%,40%,60%,80%,100%{ transform-origin:top center;}/*始终将动画定在头部的中间，也就是变化的起源地方*/
-	0%{ transform:rotate(0deg)}/*当执行到总时间的0%时，停止动画*/
-	20%{ transform:rotate(20deg)}/*当执行到总时间的20%时，向左摇摆20deg*/
-	40%{ transform:rotate(-15deg)}/*当执行到总时间的40%时，向右摇摆15deg*/
-	60%{ transform:rotate(10deg)}/*当执行到总时间的60%时，向左摇摆10deg*/
-	80%{ transform:rotate(-5deg)}/*当执行到总时间的80%时，向右摇摆5deg*/
-	100%{ transform:rotate(0deg)}/*当执行到总时间的100%时，停止动画*/
+@-webkit-keyframes rot {
+	0%,
+	100%,
+	20%,
+	40%,
+	60%,
+	80% {
+		transform-origin: top center;
+	}
+	/*始终将动画定在头部的中间，也就是变化的起源地方*/
+	0% {
+		transform: rotate(0deg);
+	}
+	/*当执行到总时间的0%时，停止动画*/
+	20% {
+		transform: rotate(20deg);
+	}
+	/*当执行到总时间的20%时，向左摇摆20deg*/
+	40% {
+		transform: rotate(-15deg);
+	}
+	/*当执行到总时间的40%时，向右摇摆15deg*/
+	60% {
+		transform: rotate(10deg);
+	}
+	/*当执行到总时间的60%时，向左摇摆10deg*/
+	80% {
+		transform: rotate(-5deg);
+	}
+	/*当执行到总时间的80%时，向右摇摆5deg*/
+	100% {
+		transform: rotate(0deg);
+	}
+	/*当执行到总时间的100%时，停止动画*/
 }
 /*一段上下抖动的css3动画，定义一个名为tb的关键帧*/
-@-webkit-keyframes tb{
-	0%{ top:0px;}
-	20%{ top:20px;}
-	40%{ top:-15px;}
-	60%{ top:10px;}
-	80%{ top:-5px;}
-	100%{ top:0px;}
+@-webkit-keyframes tb {
+	0% {
+		top: 0;
 	}
-/*一段缩小放大的css3动画，定义一个名为tb的关键帧*/
-@-webkit-keyframes sca{
-	0%{ transform:scale(1);}/*当执行到总时间的0%时，默认值1*/
-	20%{ transform:scale(1.1);}/*当执行到总时间的20%时，放大1.1倍*/
-	40%{ transform:scale(0.9);}/*当执行到总时间的40%时，缩小0.9倍*/
-	60%{ transform:scale(1.05);}/*当执行到总时间的60%时，放大1.05倍*/
-	80%{ transform:scale(0.95);}/*当执行到总时间的80%时，缩小0.95倍*/
-	100%{ transform:scale(1);}/*当执行到总时间的100%时，回复默认值1*/
-	}
-#wrap .rot{ -webkit-animation:rot 0.8s;}
-#wrap .tb{ -webkit-animation:tb 0.8s;}
-#wrap .sca{ -webkit-animation:sca 0.8s;}
 
+	20% {
+		top: 20px;
+	}
+
+	40% {
+		top: -15px;
+	}
+
+	60% {
+		top: 10px;
+	}
+
+	80% {
+		top: -5px;
+	}
+
+	100% {
+		top: 0;
+	}
+}
+/*一段缩小放大的css3动画，定义一个名为tb的关键帧*/
+@-webkit-keyframes sca {
+	0% {
+		transform: scale(1);
+	}
+	/*当执行到总时间的0%时，默认值1*/
+	20% {
+		transform: scale(1.1);
+	}
+	/*当执行到总时间的20%时，放大1.1倍*/
+	40% {
+		transform: scale(0.9);
+	}
+	/*当执行到总时间的40%时，缩小0.9倍*/
+	60% {
+		transform: scale(1.05);
+	}
+	/*当执行到总时间的60%时，放大1.05倍*/
+	80% {
+		transform: scale(0.95);
+	}
+	/*当执行到总时间的80%时，缩小0.95倍*/
+	100% {
+		transform: scale(1);
+	}
+	/*当执行到总时间的100%时，回复默认值1*/
+}
+
+#wrap .rot {
+	-webkit-animation: rot 0.8s;
+}
+
+#wrap .tb {
+	-webkit-animation: tb 0.8s;
+}
+
+#wrap .sca {
+	-webkit-animation: sca 0.8s;
+}

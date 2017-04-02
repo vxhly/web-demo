@@ -9,3 +9,5 @@
 -   **demo-3** => 优化右键菜单 =>`html5`+`css3`+`jquery`
 -   **demo-4** => css3 自定义滚动条 => `html5`+`css3`
 -   **demo-5** => 随机动画 =>`html5`+`css3`+`jquery`
+-   **demo-6** => 3D侧翻切图效果 =>`html5`+`css3`+`jquery`
+-   **demo-7** => 3D侧翻图片可点击轮播特效 =>`html5`+`css3`+`jquery`
