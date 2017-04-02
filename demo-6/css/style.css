@@ -1,0 +1,57 @@
+li{
+	list-style:none;
+}
+body{
+	padding:0;
+	margin:0;
+	height:100%;
+	width:100%;
+	overflow:hidden;
+	background:#333;
+}
+.coveflow{
+	width:1px;
+	height:1px;
+	position:absolute;
+	top:50%;
+	left:50%;
+}
+.coveflow *{
+	margin:0;
+	padding:0;
+	list-style:none;
+	top:-200px; 
+}
+.coveflow div{
+	width:480px;
+	height:360px;
+	position:absolute;
+	-webkit-transition: -webkit-transform  300ms ease-out; 
+}
+.coveflow ul{
+	-webkit-perspective: 480;
+	-webkit-transform-style:flat;
+}
+.coveflow li{
+	display:block;
+	width:480px;
+	-webkit-transition: -webkit-transform 300ms ease-out; 
+	-webkit-box-reflect: below 0 -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(60%, transparent), to(rgba(255,255,255,.2)));
+}
+.coveflow .turnLeft,.coveflow .turnRight{
+	-webkit-transform: scale(.6);
+	
+}
+.coveflow .turnLeft li{
+	-webkit-transform: rotateY(40deg);
+}
+
+.coveflow .turnRight li{
+	-webkit-transform: rotateY(-40deg);
+}
+.coveflow .flat{
+	-webkit-transform: scale(1);
+}
+.coveflow .flat li{
+	-webkit-transform: rotateY( 0deg );
+}

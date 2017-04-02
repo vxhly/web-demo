@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0px;padding:0px;}
+body{
+	overflow:hidden;/*超出部分隐藏*/
+	background-color:#000;
+	}
+html,body,div#banner,div#pic ul,div#pic{
+	width:100%;
+	height:100%;
+	}
+div#banner{ 
+	position:relative;/*生成相对定位的元素，相对于其正常位置进行定位,position 属性的默认值：static*/
+	perspective:1000px;/*视觉距离*/
+	}
+div#pic{ 
+	position:relative;/*生成相对定位的元素，相对于其正常位置进行定位,position 属性的默认值：static*/
+	transform-style:preserve-3d;/*将元素转换成3D元素*/
+	}
+div#pic ul.img li{
+	list-style-type:none;/*清楚无序列表前面的小黑点*/
+	width:100%;
+	height:100%;
+	background-position:center;/*使背景图片居中显示*/
+	background-repeat:no-repeat;/*使背景图片不重复显示*/
+	background-size:auto 100%;/*背景图片的宽为auto，高为100%*/
+	position:absolute;/*生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位,position 属性的默认值：static*/
+	left:-5000px;
+	top:0px;
+	transition:transform 0.5s;/*过渡时间*/
+	}
+div#pic ul.img li.left{ transform:scale(0.6) rotateY(12deg);/*使元素缩小0.6倍，绕着Y轴转12度*/}
+div#pic ul.img li.right{ transform:scale(0.6) rotateY(-12deg);/*使元素缩小0.6倍，绕着Y轴转-12度*/}
+div#pic ul.img li.big{ transform:scale(1.0) rotateY(0deg);/*使元素放大1倍，绕着Y轴转0度*/}
+div#nav{
+	width:124px;
+	height:42px;
+	position:absolute;/*生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位,position 属性的默认值：static*/
+	margin:0px auto 140px;
+	/*在定位的条件下，margin会失效，所以要设置left：0px；right：0px；bottom:0px;*/
+	left:0px;
+	right:0px;
+	bottom:0px;
+	}
+div#nav div.left{
+	width:41px;
+	height:100%;
+	background-image:url("../images/loopimgbtn.png");
+	float:left;/*浮动居左*/
+	cursor:pointer;/*当鼠标放上去时，鼠标变成手行*/
+	}
+div#nav div.txt{
+	width:42px;
+	height:42px;
+	color:#fff;
+	font-size:12px;
+	font-weight:bold;/*设置粗体文字*/
+	text-align:center;/*使文本水平居中*/
+	line-height:42px;/*设置行高，使文本垂直居中*/
+	float:left;/*浮动居左*/
+	cursor:default;/*当鼠标移上去时变成箭头*/
+	}
+div#nav div.right{
+	width:41px;
+	height:100%;
+	background-image:url("../images/loopimgbtn.png");
+	background-position:-41px 0px;/*设置背景图片的位置*/
+	float:left;/*浮动居左*/
+	cursor:pointer;/*当鼠标放上去时，鼠标变成手行*/
+	}
+/*配对ul下的某一个li的样式，：nth-child(n)是css3中的一个选择器*/
+div#pic ul.img li:nth-child(1){
+	background-image:url("../images/1.jpg");
+	left:0px;
+	top:0px;
+	}
+div#pic ul.img li:nth-child(2){ background-image:url("../images/2.jpg");}
+div#pic ul.img li:nth-child(3){ background-image:url("../images/3.jpg");}
+div#pic ul.img li:nth-child(4){ background-image:url("../images/4.jpg");}
+div#pic ul.img li:nth-child(5){ background-image:url("../images/5.jpg");}
+div#pic ul.img li:nth-child(6){ background-image:url("../images/6.jpg");}
