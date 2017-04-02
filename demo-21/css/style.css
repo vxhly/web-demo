@@ -1,0 +1,41 @@
+body {
+	padding-top: 100px;
+	font: 12px "\5B8B\4F53", sans-serif;
+	text-align: center;
+}
+
+.result_box {
+	margin: 0 auto;
+	width: 500px;
+	padding: 15px 0;
+	color: #cc0000;
+	font-size: 50pt;
+	text-align: center;
+	border: 3px solid #40AA53;
+	background: #efe;
+}
+
+.result_box #oknum {
+	width: 495px;
+	color: #cc0000;
+	font-size: 50pt;
+	font-family: Verdana;
+	text-align: center;
+	border: none;
+	background: #efe;
+	display: flex;
+	flex-direction: column;
+}
+
+.button_box {
+	margin: 50px 0 0;
+}
+
+.button_box .btn {
+	cursor: pointer;
+	padding: 0 30px;
+	margin: 0 10px;
+	color: #555;
+	font-family: "\5B8B\4F53", sans-serif;
+	font-size: 40px;
+}

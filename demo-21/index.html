@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>简易的抽奖程序</title>
+		<link rel="stylesheet" href="css/style.css" />
+
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/Lottery.jq.v1.0.js"></script>
+		<script type="text/javascript">
+			var array = [
+				1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21
+			];
+			var lottery;
+			window.onload = function() {
+				lottery = new Lottery(3, '结果', array, 60, $('#oknum'));
+			}
+			var start = function() {
+				lottery.start();
+			}
+			var stop = function() {
+				var result = lottery.stop();
+				alert(result);
+			}
+
+		</script>
+	</head>
+
+	<body>
+		<div class="result_box">
+			<div id="oknum"></div>
+		</div>
+
+		<div class="button_box">
+			<button class="btn" onclick="start()" accesskey="s">
+			开始(<U>S</U>)
+		</button>
+			<button class="btn" onclick="stop()" accesskey="o">
+			停止(<U>O</U>)
+		</button>
+		</div>
+	</body>
+
+</html>

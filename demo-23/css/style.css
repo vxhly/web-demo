@@ -1,0 +1,101 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.Product {
+	width: 640px;
+	height: 180px;
+	background: #f9f9f9;
+	border-bottom: 1px dotted #000;
+	padding: 30px 30px 0;
+	/*内边距的上边距为30px，左边距为30px，下边距为0px，右边距为30px；padding后面跟一个值时，是设上下左右都为同一个值；padding后面跟两个值时，是设上下、左右的值；padding后面跟三个值时，是设上、左右、下的值；padding后面跟四个值时，是设上、右、下、左的值*/
+}
+
+.Product .img {
+	width: 158px;
+	height: 158px;
+	background: #CC66FF;
+	float: left;
+	/*浮动居左*/
+}
+
+.Product .txt {
+	width: 380px;
+	height: 158px;
+	float: left;
+	/*浮动居左*/
+	padding-left: 15px;
+	/*内边距的左边距为15px*/
+}
+
+.Product .intro {
+	width: 72px;
+	height: 158px;
+	float: right;
+	/*浮动居右*/
+}
+
+.Product .img .pic {
+	width: 156px;
+	height: 156px;
+	border: 1px solid #ddd;
+}
+
+.Product .txt h3 {
+	font-size: 18px;
+	font-family: "微软雅黑";
+	line-height: 40px;
+	/*设置行高，使文本垂直居中*/
+}
+
+.Product .txt p {
+	font-size: 12px;
+	color: #000;
+	font-family: "微软雅黑";
+}
+
+.Product .txt .wy {
+	line-height: 25px;
+	/*设置行高，使文本垂直居中*/
+}
+
+.Product .txt p a {
+	color: #ff0096;
+	text-decoration: none;
+	/*清除超链接的下划线*/
+}
+
+.Product .txt p.des {
+	line-height: 20px;
+	/*设置行高，使文本垂直居中*/
+}
+
+.Product .intro p.num {
+	width: 72px;
+	height: 31px;
+	background: url("../images/bg.png");
+	font-size: 16px;
+	color: #fff;
+	font-family: "微软雅黑";
+	text-align: center;
+	/*使文字在水平距中*/
+	line-height: 31px;
+	/*设置行高，使文本垂直居中*/
+}
+
+.Product .intro p.to {
+	font-size: 16px;
+	font-family: "微软雅黑";
+	line-height: 35px;
+	/*设置行高，使文本垂直居中*/
+	text-align: center;
+	/*使文字在水平距中*/
+}
+/*当鼠标放上去时添加的样式，hover为css中的一个样式*/
+.Product .txt p a:hover {
+	text-decoration: underline;
+	/*加上超链接的下划线*/
+}
