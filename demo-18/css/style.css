@@ -1,0 +1,202 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	margin: 0;
+	padding: 0;
+}
+/*以id命名的盒子，定义要以#号打头，并称其的css样式为ID选择器；以class命名的盒子，定义要以.号打头,并称其的css样式为类选择器*/
+ul li {
+	list-style-type: none;
+	/*清除无序列表的小黑点*/
+}
+
+#MenuBody {
+	width: 720px;
+	height: 45px;
+	background-color: #333;
+	margin: 50px auto 0;
+	margin-top: 50px;
+	/*外边距的上边距为50px*/
+	border-radius: 5px;
+	/*给一个5px的圆角边框*/
+	-webkit-border-radius:5px
+	/*-webkit-这个属性，主要是专门支持Chrome 和 Safari 浏览器的CSS属性*/
+	-moz-border-radius: 5px;
+	/*-moz-这个属性 主要是专门支持Mozilla Firefox 火狐浏览器的CSS属性*/
+}
+
+#MenuMark {
+	width: 0;
+	height: 5px;
+	background-color: #ff5500;
+	margin-top: 40px;
+	/*外边距的上边距为40px*/
+	border-radius: 2px;
+	/*给一个2px的圆角边框*/
+	-webkit-border-radius: 2px;
+	/*-webkit-这个属性，主要是专门支持Chrome 和 Safari 浏览器的CSS属性*/
+	-moz-border-radius: 2px;
+	/*-moz-这个属性 主要是专门支持Mozilla Firefox 火狐浏览器的CSS属性*/
+	transition-duration: 0.5s;
+	/*给一个过渡的时间*/
+}
+
+#MenuItemChild > li > a {
+	background-color: #333;
+}
+
+#MenuItemChild {
+	visibility: hidden;
+	/*将该元素里的内容隐藏*/
+	width: 100%;
+	float: left;
+	/*浮动居左*/
+}
+
+.MenuItem {
+	float: left;
+	/*浮动居左*/
+	width: 120px;
+	height: 50px;
+}
+
+.MenuItem > a,
+.MenuItemChildItem > a {
+	float: left;
+	/*浮动居左*/
+	color: #fff;
+	padding: 10px 0;
+	/*内边距的上边距为10px，左边距为0px，下边距为10px，右边距为0px；padding后面跟一个值时，是设上下左右都为同一个值；padding后面跟两个值时，是设上下、左右的值；padding后面跟三个值时，是设上、左右、下的值；padding后面跟四个值时，是设上、右、下、左的值*/
+	text-align: center;
+	/*使文字水平居中*/
+	font-size: 15px;
+	font-family: "微软雅黑";
+	cursor: pointer;
+	/*当鼠标移动上去时，鼠标变成手行*/
+	width: 120px;
+}
+
+.MenuItemChildItem {
+	color: #fff;
+	perspective: 300px;
+	/*perspective 属性定义 3D 元素距视图的距离为300px。该属性允许您改变 3D 元素查看 3D 元素的视图。当为元素定义 perspective 属性时，其子元素会获得透视效果，而不是元素本身。*/
+	-webkit-perspective: 300px;
+	/*-webkit-这个属性，主要是专门支持Chrome 和 Safari 浏览器的CSS属性*/
+	-moz-perspective: 300px;
+	/*-moz-这个属性，主要是专门支持Mozilla Firefox 火狐浏览器的CSS属性*/
+	-ms-perspective: 300px;
+	/*-ms-这个属性，主要是专门支持IE 浏览器的CSS属性*/
+	-o-perspective: 300px;
+	/*-o-这个属性，主要是专门支持Opera 欧朋浏览器的CSS属性*/
+}
+
+.MenuItemChildItem > a {
+	border-bottom: 1px solid #222222;
+	border-top: 1px solid #555555;
+	-webkit-transform: rotateZ(90deg);
+	/*表示该动画是绕着Z轴从90度的方位旋转*/
+	transition-duration: 0.5s;
+	/*给一个过渡的时间*/
+	perspective: 400px;
+	/*perspective 属性定义 3D 元素距视图的距离为400px。该属性允许您改变 3D 元素查看 3D 元素的视图。当为元素定义 perspective 属性时，其子元素会获得透视效果，而不是元素本身。*/
+	-webkit-perspective: 400px;
+	/*-webkit-这个属性，主要是专门支持Chrome 和 Safari 浏览器的CSS属性*/
+	-moz-perspective: 400px;
+	/*-moz-这个属性，主要是专门支持Mozilla Firefox 火狐浏览器的CSS属性*/
+	-ms-perspective: 400px;
+	/*-ms-这个属性，主要是专门支持IE 浏览器的CSS属性*/
+	-o-perspective: 400px;
+	/*-o-这个属性，主要是专门支持Opera 欧朋浏览器的CSS属性*/
+	opacity: 0;
+	/*设置透明背景，0为全透明，1为默认值*/
+}
+/*当鼠标移动到该标签时，它的子标签发生的变化；hover为css里的一个伪类*/
+.MenuItem:hover #MenuMark {
+	width: 100%;
+}
+
+.MenuItem:hover #MenuItemChild {
+	visibility: visible;
+	/*使隐藏的内容浮现*/
+}
+/*当鼠标移动到该标签时，发生的变化；hover为css里的一个伪类*/
+.MenuItemChildItem > a:hover {
+	background-color: #252525 !important;
+	/*!important是CSS1就定义的语法，作用是提高指定样式规则的应用优先权。语法格式{ cssRule !important }，即写在定义的最后面*/
+}
+
+.MenuItem > a:hover {
+	background-color: #252525;
+}
+/*当鼠标移动到该标签时，发生的变化；nth-child()为css3里的一个选择器*/
+.MenuItem:hover #MenuItemChild > li:nth-child(1) > a {
+	opacity: 1;
+	/*设置透明背景，0为全透明，1为默认值*/
+	transition-delay: 0.1s;
+	/*给一个过渡的时间*/
+	-webkit-transform: rotateZ(0deg);
+	/*表示该动画是绕着Z轴从定义的方位转到0度*/
+}
+
+.MenuItem:hover #MenuItemChild > li:nth-child(2) > a {
+	opacity: 1;
+	/*设置透明背景，0为全透明，1为默认值*/
+	transition-delay: 0.2s;
+	/*给一个过渡的时间*/
+	-webkit-transform: rotateZ(0deg);
+	/*表示该动画是绕着Z轴从定义的方位转到0度*/
+}
+
+.MenuItem:hover #MenuItemChild > li:nth-child(3) > a {
+	opacity: 1;
+	/*设置透明背景，0为全透明，1为默认值*/
+	transition-delay: 0.4s;
+	/*给一个过渡的时间*/
+	-webkit-transform: rotateZ(0deg);
+	/*表示该动画是绕着Z轴从定义的方位转到0度*/
+}
+
+.MenuItem:hover #MenuItemChild > li:nth-child(4) > a {
+	opacity: 1;
+	/*设置透明背景，0为全透明，1为默认值*/
+	transition-delay: 0.5s;
+	/*给一个过渡的时间*/
+	-webkit-transform: rotateZ(0deg);
+	/*表示该动画是绕着Z轴从定义的方位转到0度*/
+}
+
+.MenuItem:hover #MenuItemChild > li:nth-child(5) > a {
+	opacity: 1;
+	/*设置透明背景，0为全透明，1为默认值*/
+	transition-delay: 0.6s;
+	/*给一个过渡的时间*/
+	-webkit-transform: rotateZ(0deg);
+	/*表示该动画是绕着Z轴从定义的方位转到0度*/
+}
+
+.MenuItem:hover #MenuItemChild > li:nth-child(6) > a {
+	opacity: 1;
+	/*设置透明背景，0为全透明，1为默认值*/
+	transition-delay: 0.8s;
+	/*给一个过渡的时间*/
+	-webkit-transform: rotateZ(0deg);
+	/*表示该动画是绕着Z轴从定义的方位转到0度*/
+}
+
+.MenuItem:nth-child(6) > a {
+	border-radius: 0 5px 0 0;
+	/*给一个只有右上角有圆角边框，四个值分别是左上，右上，右下，左下*/
+	-webkit-border-radius: 0 5px 0 0;
+	/*-webkit-这个属性，主要是专门支持Chrome 和 Safari 浏览器的CSS属性*/
+	-moz-border-radius: 0 5px 0 0;
+	/*-moz-这个属性，主要是专门支持Mozilla Firefox 火狐浏览器的CSS属性*/
+}
+/*匹配该元素下的第一个子标签的样式；first-child是css里的一个伪类*/
+.MenuItem:first-child > a {
+	border-radius: 5px 0 0 0;
+	/*给一个只有右上角有圆角边框，四个值分别是左上，右上，右下，左下*/
+	-webkit-border-radius: 5px 0 0 0;
+	/*-webkit-这个属性，主要是专门支持Chrome 和 Safari 浏览器的CSS属性*/
+	-moz-border-radius: 5px 0 0 0;
+	/*-moz-这个属性，主要是专门支持Mozilla Firefox 火狐浏览器的CSS属性*/
+}

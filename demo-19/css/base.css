@@ -1,0 +1,73 @@
+/*
+ * 浏览器重写部分
+ *
+ * 这一层位于三者的最底层，提供CSS  reset功能和粒度最小的通用类—原子类。
+ * 这一层会被所有页面引用，是页面样式所需依赖的最底层。这一层与UI设计师无关，无论何种风格的设计都可以应用它，所以base层要力求精简和通用。
+ * 如果将用CSS控制页面样式比喻建房子，这一层的核心职能就是为房子打好地基（CSS  reset）,并将建房用的砖块（原子类）准备充足。
+ * 因为所有的房子都要打地基，也都需要砖块，所以base层具有高度可移植性，不同的设计风格的网站都可以使用同一个base层。
+ * 因为这一层的内容很少。所以可以简单的放在一个文件里，例如base.css。
+ * base层相对稳定，基本上不需要维护
+ * */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+html {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption,
+td,
+th {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+    content: "";
+    content: none;
+}
+
+a img {
+    border: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}

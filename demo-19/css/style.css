@@ -1,0 +1,425 @@
+body {
+	font-family: "微软雅黑" serif;
+	background: #DDD;
+	font-weight: 400;
+	font-size: 15px;
+	color: #333;
+	overflow: hidden;
+	/*抗锯齿或者光滑度， 反锯齿效果，多用在英文字体上*/
+	-webkit-font-smoothing: antialiased;
+}
+@font-face {
+	font-family: '微软雅黑';
+	font-weight: normal;
+	font-style: normal;
+}
+
+a {
+	text-decoration: none;
+	color: #555;
+}
+
+.clr {
+	widows: 0;
+	height: 0;
+	overflow: hidden;
+	clear: both;
+	padding: 0;
+	margin: 0;
+}
+/*导航 Start*/
+.st-container {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	font-family: "微软雅黑";
+}
+
+.st-container > a,
+.st-container > input {
+	width: 20%;
+	height: 50px;
+	line-height: 50px;
+	position: fixed;
+	bottom: 0;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+.st-container > input {
+	opacity: 0;
+	z-index: 100;
+}
+
+.st-container > a {
+	z-index: 10;
+	font-size: 700;
+	background: #e23a6e;
+	text-align: center;
+	color: #FFFFFF;
+	text-shadow: 5px 5px 5px rgba(151, 24, 64, 0.2);
+}
+
+#st-control-1,
+#st-control-1 + a {
+	left: 0;
+}
+
+#st-control-2,
+#st-control-2 + a {
+	left: 20%;
+}
+
+#st-control-3,
+#st-control-3 + a {
+	left: 40%;
+}
+
+#st-control-4,
+#st-control-4 + a {
+	left: 60%;
+}
+
+#st-control-5,
+#st-control-5 + a {
+	left: 80%;
+}
+
+.st-container input:checked + a,
+.st-container input:checked:hover + a {
+	background: #821134;
+}
+/*三角形的写法*/
+.st-container input:checked + a:after {
+	content: "";
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	border: 20px solid transparent;
+	border-bottom-color: #821134;
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	margin-left: -20px;
+}
+
+.st-container input:hover + a {
+	background: #AD244f;
+}
+/*导航 End*/
+/*内容 start*/
+.st-color {}
+
+.st-panel,
+.st-scroll {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.st-scroll {
+	left: 0;
+	top: 0;
+	transform: translate3d(0, 0, 0);
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	/*当元素不面向屏幕时 是否可见*/
+	backface-visibility: hidden;
+	transition: all 1s ease-in-out;
+	-webkit-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+}
+
+.st-panel {
+	background: #FFF;
+	overflow: hidden;
+}
+
+#st-control-1:checked ~ .st-scroll {
+	transform: translateY(0%);
+	-webkit-transform: translateY(0%);
+	-moz-transform: translateY(0%);
+	-ms-transform: translateY(0%);
+	-o-transform: translateY(0%);
+}
+
+#st-control-2:checked ~ .st-scroll {
+	transform: translateY(-100%);
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	-o-transform: translateY(-100%);
+}
+
+#st-control-3:checked ~ .st-scroll {
+	transform: translateY(-200%);
+	-webkit-transform: translateY(-200%);
+	-moz-transform: translateY(-200%);
+	-ms-transform: translateY(-200%);
+	-o-transform: translateY(-200%);
+}
+
+#st-control-4:checked ~ .st-scroll {
+	transform: translateY(-300%);
+	-webkit-transform: translateY(-300%);
+	-moz-transform: translateY(-300%);
+	-ms-transform: translateY(-300%);
+	-o-transform: translateY(-300%);
+}
+
+#st-control-5:checked ~ .st-scroll {
+	transform: translateY(-400%);
+	-webkit-transform: translateY(-400%);
+	-moz-transform: translateY(-400%);
+	-ms-transform: translateY(-400%);
+	-o-transform: translateY(-400%);
+}
+
+.st-desc {
+	width: 200px;
+	height: 200px;
+	background: #E23A6E;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	margin-left: -100px;
+	-webkit-transform: translateY(-50%) rotate(45deg);
+	-moz-transform: translateY(-50%) rotate(45deg);
+	-o-transform: translateY(-50%) rotate(45deg);
+	-ms-transform: translateY(-50%) rotate(45deg);
+	font-family: "myFont";
+	text-shadow: 5px 5px 5px rgba(151, 24, 64, 0.2);
+}
+
+[data-icon]:after {
+	content: attr(data-icon);
+	width: 200px;
+	height: 200px;
+	color: #FFF;
+	font-size: 90px;
+	text-align: center;
+	line-height: 200px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -25px 0 0 -25px;
+	/*顺序很重要*/
+	-webkit-transform: rotate(-45deg) translateY(-25%);
+	-ms-transform: rotate(-45deg) translateY(-25%);
+	-o-transform: rotate(-45deg) translateY(-25%);
+	-moz-transform: rotate(-45deg) translateY(-25%);
+}
+
+.st-panel h2 {
+	color: #E23A6E;
+	font-size: 54px;
+	line-height: 90px;
+	text-align: center;
+	font-weight: 900;
+	width: 80%;
+	position: absolute;
+	left: 10%;
+	top: 50%;
+	margin-top: -100px;
+	text-shadow: 5px 5px 5px rgba(151, 24, 64, 0.2);
+	backface-visibility: hidden;
+}
+/* h2标题的动画开始*/
+#st-control-1:checked ~ .st-scroll #st-panel-1 h2,
+#st-control-2:checked ~ .st-scroll #st-panel-2 h2,
+#st-control-3:checked ~ .st-scroll #st-panel-3 h2,
+#st-control-4:checked ~ .st-scroll #st-panel-4 h2,
+#st-control-5:checked ~ .st-scroll #st-panel-5 h2 {
+	/*动画名称，动画持续时间，速度曲线， 延时， 动画之前开始状态*/
+	-webkit-animation: moveDown 1s ease-in-out 0.2s backwards;
+	-moz-animation: moveDown 1s ease-in-out 0.2s backwards;
+	-ms-animation: moveDown 1s ease-in-out 0.2s backwards;
+	-o-animation: moveDown 1s ease-in-out 0.2s backwards;
+	animation: moveDown 1s ease-in-out 0.2s backwards;
+}
+@-webkit-keyframes moveDown {
+	from {
+		-webkit-transform: translateY(-100px);
+		opacity: 0;
+	}
+
+	to {
+		-webkit-transform: translateY(0);
+		opacity: 1;
+	}
+}
+@-moz-keyframes moveDown {
+	from {
+		-moz-transform: translateY(-100px);
+		opacity: 0;
+	}
+
+	to {
+		-moz-transform: translateY(0);
+		opacity: 1;
+	}
+}
+@keyframes moveDown {
+	from {
+		transform: translateY(-100px);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@-ms-keyframes moveDown {
+	from {
+		-ms-transform: translateY(-100px);
+		opacity: 0;
+	}
+
+	to {
+		-ms-transform: translateY(0);
+		opacity: 1;
+	}
+}
+@-webkit-keyframes moveUp {
+	from {
+		-webkit-transform: translateY(100px);
+		opacity: 0;
+	}
+
+	to {
+		-webkit-transform: translateY(0);
+		opacity: 1;
+	}
+}
+@-moz-keyframes moveUp {
+	from {
+		-moz-transform: translateY(100px);
+		opacity: 0;
+	}
+
+	to {
+		-moz-transform: translateY(0);
+		opacity: 1;
+	}
+}
+@keyframes moveUp {
+	from {
+		transform: translateY(100px);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@-ms-keyframes moveUp {
+	from {
+		-ms-transform: translateY(100px);
+		opacity: 0;
+	}
+
+	to {
+		-ms-transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.st-panel p {
+	position: absolute;
+	width: 50%;
+	left: 25%;
+	top: 50%;
+	font-size: 16px;
+	line-height: 22px;
+	padding: 0;
+	text-align: center;
+	backface-visibility: hidden;
+	color: #8b8b8b;
+	margin-top: 10px;
+}
+
+#st-control-1:checked ~ .st-scroll #st-panel-1 p,
+#st-control-2:checked ~ .st-scroll #st-panel-2 p,
+#st-control-3:checked ~ .st-scroll #st-panel-3 p,
+#st-control-4:checked ~ .st-scroll #st-panel-4 p,
+#st-control-5:checked ~ .st-scroll #st-panel-5 p {
+	-webkit-animation: moveUp 1s ease-in-out 0.2s backwards;
+	-moz-animation: moveUp 1s ease-in-out 0.2s backwards;
+	-ms-animation: moveUp 1s ease-in-out 0.2s backwards;
+	-o-animation: moveUp 1s ease-in-out 0.2s backwards;
+	animation: moveUp 1s ease-in-out 0.2s backwards;
+}
+/*颜色定义*/
+.st-color {
+	background: #fa76b5;
+}
+
+.st-color .st-desc {
+	background: #FFF;
+}
+
+.st-color [data-icon]:after {
+	color: #FA76B5;
+}
+
+.st-color h2 {
+	color: #FFF;
+	text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.st-color p {
+	color: rgba(255, 255, 255, 0.8);
+}
+/*响应式设置*/
+@media screen and (min-width: 320px) and (max-width: 800px) {
+	.st-panel h2 {
+		font-size: 36px;
+	}
+
+	.st-panel p {
+		width: 90%;
+		left: 10%;
+		margin-top: 0;
+	}
+
+	.st-container > a {
+		font-size: 13px;
+	}
+}
+@media screen and (max-width: 320px) {
+	.st-panel h2 {
+		font-size: 26px;
+	}
+
+	.st-panel p {
+		width: 90%;
+		left: 10%;
+		margin-top: 0;
+	}
+
+	.st-container > a {
+		font-size: 10px;
+	}
+
+	.st-desc {
+		width: 120px;
+		height: 120px;
+		margin-left: -60px;
+	}
+
+	[data-icon]:after {
+		-webkit-transform: rotate(-45deg) translateY(-35%);
+		-ms-transform: rotate(-45deg) translateY(-35%);
+		-o-transform: rotate(-45deg) translateY(-35%);
+		-moz-transform: rotate(-45deg) translateY(-35%);
+		font-size: 60px;
+	}
+}
