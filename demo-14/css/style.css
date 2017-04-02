@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url("../images/title.jpg") repeat-x,url("../images/bg.jpg");
+}
+
+.nav {
+    width: 916px;
+    height: 47px;
+    margin: 50px auto;
+    background: -webkit-linear-gradient(top,rgba(40,40,40,0.7) 0%,rgba(54,54,54,0.7) 50%,rgba(24,24,24,0.9) 51%);
+    /*颜色渐变*/
+    box-shadow: 0 0 10px #fff;
+    border-radius: 5px;
+}
+
+.nav ul li {
+    list-style-type: none;
+    float: left;
+    width: 130px;
+    height: 47px;
+    line-height: 47px;
+    text-align: center;
+    border-right: 1px solid #000;
+}
+
+.nav ul li:hover {
+    background: rgba(10,5,5,0.5);
+}
+
+.nav ul li a {
+    font-family: "微软雅黑";
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav ul li.last {
+    border-right: none;
+    border-radius: 0 5px 5px 0;
+}
+
+.nav ul li.first {
+    border-radius: 5px 0 0 5px;
+}
+
+.nav ul li.last li {
+    border-right: none;
+}
+
+.nav .hid1 {
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: 0.5s;
+}
+
+.nav .hid2 {
+    display: none;
+}
+
+.nav ul li:hover .hid1 {
+    height: 141px;
+}
+
+.nav ul li:hover .hid2 {
+    display: block;
+    -webkit-animation: anim 0.5s;
+}
+
+.nav ul.bg li {
+    border: none;
+    background-color: rgba(10,5,5,0.45);
+}
+
+.nav ul.bg li:hover {
+    background-color: rgba(10,5,5,0.7);
+}
+
+.dome {
+    width: 916px;
+    height: 400px;
+    background: #fff;
+    border-radius: 10px;
+    margin: auto;
+}
+/*css3动画*/
+@-webkit-keyframes anim {
+    from {
+        -webkit-transform: rotateY(0deg);
+    }
+
+    to {
+        -webkit-transform: rotateY(360deg);
+    }
+}

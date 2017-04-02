@@ -15,4 +15,9 @@
 -   **demo-9**  => 抽屉式展示图片特效 =>`html5`+`css3`+`jquery`
 -   **demo-10** => 精美图片可预览展示效果 =>`html5`+`css3`+`jquery`
 -   **demo-11** => 选项卡菜单 =>`html5`+`css3`+`jquery`
--   **demo-12** => flexbox布局 =>`html5`+`css3`+`jquery`
+-   **demo-12** => flexbox布局 =>`html5`+`css3`
+-   **demo-13** => 竖向手风琴单页 =>`html5`+`css3`
+-   **demo-14** => 实用美观下拉导航 =>`html5`+`css3`
+-   **demo-15** => CSS3 Loading 加载动画 =>`html5`+`css3`
+-   **demo-16** => 3D旋转动画特效 =>`html5`+`css3`
+-   **demo-16** => CSS3美化按钮 =>`html5`+`css3`

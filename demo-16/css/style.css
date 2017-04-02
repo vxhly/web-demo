@@ -1,0 +1,182 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+}
+
+.container {
+	position: absolute;
+	/*生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位,position 属性的默认值：static*/
+	height: 100px;
+	width: 100px;
+	left: 33%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	/*向X轴移动-50%，向Y轴移动-50%*/
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	/*-webkit-这个属性，主要是专门支持Chrome 和 Safari 浏览器的CSS属性*/
+	-moz-transform: translateX(-50%) translateY(-50%);
+	/*-moz-这个属性，主要是专门支持Mozilla Firefox 火狐浏览器的CSS属性*/
+	-o-transform: translateX(-50%) translateY(-50%);
+	/*-o-这个属性，主要是专门支持Opera 欧朋浏览器的CSS属性*/
+	perspective: 400px;
+	/*视距*/
+}
+
+.cube {
+	height: 100px;
+	widTH: 100px;
+	transform-origin: 50% 50%;
+	/*定义元素的位置是在X轴的50%处，Y轴的50%处*/
+	-webkit-transform-origin: 50% 50%;
+	/*-webkit-这个属性，主要是专门支持Chrome 和 Safari 浏览器的CSS属性*/
+	-moz-transform-origin: 50% 50%;
+	/*-moz-这个属性，主要是专门支持Mozilla Firefox 火狐浏览器的CSS属性*/
+	-o-transform-origin: 50% 50%;
+	/*-o-这个属性，主要是专门支持Opera 欧朋浏览器的CSS属性*/
+	transform-style: preserve-3d;
+	/*将该元素转换成3D模式*/
+	animation: rotate 4s infinite ease-in-out;
+	/*用4秒执行动画silde，infinite无限次执行,ease-in-out:动画以低速开始和结束。*/
+	-webkit-animation: rotate 4s infinite ease-in-out;
+	/*-webkit-这个属性，主要是专门支持Chrome 和 Safari 浏览器的CSS属性*/
+	-moz-animation: rotate 4s infinite ease-in-out;
+	/*-moz-这个属性，主要是专门支持Mozilla Firefox 火狐浏览器的CSS属性*/
+	-o-animation: rotate 4s infinite ease-in-out;
+	/*-o-这个属性，主要是专门支持Opera 欧朋浏览器的CSS属性*/
+}
+
+.side {
+	position: absolute;
+	/*生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位,position 属性的默认值：static*/
+	display: block;
+	/*把一个没有宽高的元素变成有宽高,对于块元素，给它宽高可以直接显示出来；但是对于内联元素，给它宽高不会显示出来，只会显示内容区域及内容的宽高，所以要用到display:block进行转化*/
+	height: 100px;
+	width: 100px;
+}
+
+.side1 {
+	background: #41C3AC;
+	transform: translateZ(100px);
+	/*向Z轴移动100px*/
+	-webkit-transform: translateZ(100px);
+	/*-webkit-这个属性，主要是专门支持Chrome 和 Safari 浏览器的CSS属性*/
+	-moz-transform: translateZ(100px);
+	/*-moz-这个属性，主要是专门支持Mozilla Firefox 火狐浏览器的CSS属性*/
+	-o-transform: translateZ(100px);
+	/*-o-这个属性，主要是专门支持Opera 欧朋浏览器的CSS属性*/
+}
+
+.side2 {
+	background: #FF884D;
+	transform: rotateY(90deg) translateZ(100px);
+	/*绕着Y轴旋转90度，向Z轴移动100px*/
+	-webkit-transform: rotateY(90deg) translateZ(100px);
+	/*-webkit-这个属性，主要是专门支持Chrome 和 Safari 浏览器的CSS属性*/
+	-moz-transform: rotateY(90deg) translateZ(100px);
+	/*-moz-这个属性，主要是专门支持Mozilla Firefox 火狐浏览器的CSS属性*/
+	-o-transform: rotateY(90deg) translateZ(100px);
+	/*-o-这个属性，主要是专门支持Opera 欧朋浏览器的CSS属性*/
+}
+
+.side3 {
+	background: #32526E;
+	transform: rotateY(180deg) translateZ(100px);
+	/*绕着Y轴旋转180度，向Z轴移动100px*/
+	-webkit-transform: rotateY(180deg) translateZ(100px);
+	/*-webkit-这个属性，主要是专门支持Chrome 和 Safari 浏览器的CSS属性*/
+	-moz-transform: rotateY(180deg) translateZ(100px);
+	/*-moz-这个属性，主要是专门支持Mozilla Firefox 火狐浏览器的CSS属性*/
+	-o-transform: rotateY(180deg) translateZ(100px);
+	/*-o-这个属性，主要是专门支持Opera 欧朋浏览器的CSS属性*/
+}
+
+.side4 {
+	background: #65A2C5;
+	transform: rotateY(-90deg) translateZ(100px);
+	/*绕着Y轴旋转-90度，向Z轴移动100px*/
+	-webkit-transform: rotateY(-90deg) translateZ(100px);
+	/*-webkit-这个属性，主要是专门支持Chrome 和 Safari 浏览器的CSS属性*/
+	-moz-transform: rotateY(-90deg) translateZ(100px);
+	/*-moz-这个属性，主要是专门支持Mozilla Firefox 火狐浏览器的CSS属性*/
+	-o-transform: rotateY(-90deg) translateZ(100px);
+	/*-o-这个属性，主要是专门支持Opera 欧朋浏览器的CSS属性*/
+}
+
+.side5 {
+	background: #FFCC5C;
+	transform: rotateX(90deg) translateZ(100px);
+	/*绕着X轴旋转90度，向Z轴移动100px*/
+	-webkit-transform: rotateX(90deg) translateZ(100px);
+	/*-webkit-这个属性，主要是专门支持Chrome 和 Safari 浏览器的CSS属性*/
+	-moz-transform: rotateX(90deg) translateZ(100px);
+	/*-moz-这个属性，主要是专门支持Mozilla Firefox 火狐浏览器的CSS属性*/
+	-o-transform: rotateX(90deg) translateZ(100px);
+	/*-o-这个属性，主要是专门支持Opera 欧朋浏览器的CSS属性*/
+}
+
+.side6 {
+	background: #FF6B57;
+	transform: rotateX(-90deg) translateZ(100px);
+	/*绕着X轴旋转90度，向Z轴移动100px*/
+	-webkit-transform: rotateX(-90deg) translateZ(100px);
+	/*-webkit-这个属性，主要是专门支持Chrome 和 Safari 浏览器的CSS属性*/
+	-moz-transform: rotateX(-90deg) translateZ(100px);
+	/*-moz-这个属性，主要是专门支持Mozilla Firefox 火狐浏览器的CSS属性*/
+	-o-transform: rotateX(-90deg) translateZ(100px);
+	/*-o-这个属性，主要是专门支持Opera 欧朋浏览器的CSS属性*/
+}
+/*CSS3动画*/
+@-webkit-keyframes rotate {
+	/*-webkit-这个属性，主要是专门支持Chrome 和 Safari 浏览器的CSS属*/
+	0% {
+		-webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	}
+	/*0%时不旋转*/
+	33.33% {
+		-webkit-transform: rotateX(360deg) rotateY(0deg) rotateZ(0deg);
+	}
+	/*33.33%时绕X轴旋转360度，绕Y轴旋转0度，绕Z轴旋转0度*/
+	66.66% {
+		-webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(0deg);
+	}
+	/*66.66%时绕X轴旋转360度，绕Y轴旋转360度，绕Z轴旋转0度*/
+	100% {
+		-webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+	}
+	/*100%时绕X轴旋转360度，绕Y轴旋转360度，绕Z轴旋转360*/
+}
+@keyframes rotate {
+	0% {
+		transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	}
+	/*0%时不旋转*/
+	33.33% {
+		transform: rotateX(360deg) rotateY(0deg) rotateZ(0deg);
+	}
+	/*33.33%时绕X轴旋转360度，绕Y轴旋转0度，绕Z轴旋转0度*/
+	66.66% {
+		transform: rotateX(360deg) rotateY(360deg) rotateZ(0deg);
+	}
+	/*66.66%时绕X轴旋转360度，绕Y轴旋转360度，绕Z轴旋转0度*/
+	100% {
+		transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+	}
+	/*100%时绕X轴旋转360度，绕Y轴旋转360度，绕Z轴旋转360*/
+}
+
+.container2 {
+	left: 66%;
+	/*向右移动66%*/
+}
+
+.container2 .side {
+	border-radius: 50%;
+	/*给一个圆角边框*/
+}
