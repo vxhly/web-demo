@@ -50,3 +50,7 @@
     -   => CSS3按钮Button样式 =>`html5`+`css3`
 -   **[demo-23](https://github.com/vxhly/web-demo/tree/master/demo-23)**
     -   => 左图右文的产品列表 =>`html5`+`css3`
+-   **[demo-24](https://github.com/vxhly/web-demo/tree/master/demo-24)**
+    -   => 无限循环竖向手风琴 =>`html5`+`css3`+`jquery`
+-   **[demo-25](https://github.com/vxhly/web-demo/tree/master/demo-25)**
+    -   => 透明缩略可轮播特效 =>`html5`+`css3`+`jquery`

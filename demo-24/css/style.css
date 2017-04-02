@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* CSS Document */
+body,
+html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 600px;
+}
+
+body * {
+    font-family: "微软雅黑";
+    font-size: 14px;
+    color: #333;
+    line-height: 22px;
+}
+
+#wrapper {
+    width: 900px;
+    height: 525px;
+    margin: -262px 0 0 -450px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+#carousel div {
+    cursor: pointer;
+    margin-right: -650px;
+    float: left;
+    position: relative;
+    box-shadow: 0 0 10px #000;
+}
+
+#carousel div:last-child {
+    cursor: default;
+}
+
+#carousel div span {
+    background-color: #222;
+    background-color: rgba(0,0,0, 0.8);
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+    display: inline-block;
+    width: 700px;
+    height: 25px;
+    padding: 20px 0;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+#donate-spacer {
+    height: 100%;
+}
+
+#donate {
+    border-top: 1px solid #999;
+    width: 750px;
+    padding: 50px 75px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#donate form,
+#donate p {
+    margin: 0;
+    float: left;
+}
+
+#donate p {
+    width: 650px;
+}
+
+#donate form {
+    width: 100px;
+}
