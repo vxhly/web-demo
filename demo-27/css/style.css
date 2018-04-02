@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0px;padding:0px}
+body{ 
+	background-image:url("../images/1.jpg");
+	background-attachment:fixed;/*设置背景不随着文档的滚动而滚动*/
+	}
+a.but{
+	background:url("../images/upseek.png");
+	width:50px;
+	height:50px;
+	display:block;/*将元素设置为块元素*/
+	position:fixed;/*生成固定定位元素*/
+	top:0px;
+	right:0px;
+	}
+a.but:hover{ background-position:bottom;/*设置背景图片位置*/}	
+div.scrollcon{
+	width:100%;
+	height:120px;
+	background-color:rgba(0,0,0,0.5);
+	box-shadow:0px 4px 10px #fff;/*设置盒子的阴影，第一个值为阴影在X轴的偏移量，第二个值为阴影在Y轴的偏移量，第三个值为阴影的模糊程度*/
+	display:none;
+	}
+div.scroll{
+	width:840px;
+	height:100px;
+	margin:0px auto;
+	padding:10px 0px;
+	overflow:hidden;
+	position:relative;
+	}
+div.scroll ul{
+	width:1000%;
+	position:absolute;
+	-webkit-animation:marquee 10s linear infinite alternate;/*linear:速度曲线；infinite：无限次执行动画*/
+	}
+div.scroll ul:hover{ -webkit-animation-play-state:paused;/*是动画暂停*/}
+div.scroll ul li{
+	list-style-type:none;
+	float:left;
+	margin:10px;
+	cursor:pointer;
+	}
+div.scroll ul li img{
+	width:138px;
+	height:75px;
+	border:5px solid #fff;
+	}
+@-webkit-keyframes marquee{
+	0%{left:0px;}
+	20%{left:0px;}
+	40%{left:-840px;}
+	60%{left:-840px;}
+	80%{left:-1680px;}
+	100%{left:-1680px;}
+	}

@@ -1,0 +1,101 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0px;padding:0px;}
+html,body{height:100%;width:100%;}
+.bg1,.bg2,.bg3,.bg4{
+	width:100%;
+	height:100%;
+	background-position:center;/*使背景图片是从中间开始的*/
+	background-attachment:fixed;/*使背景图片固定不随滚动条滚动而滚动*/
+	position:relative;/*生成相对定位的元素，相对于其正常位置进行定位,position 属性的默认值：static*/
+	}
+.bg1{background-image:url("../images/1.jpg");}
+.bg2{background-image:url("../images/2.jpg");}
+.bg3{background-image:url("../images/3.jpg");}
+.bg4{background-image:url("../images/4.jpg");}
+div.top{
+	width:100%;
+	height:50px;
+	position:fixed;/*生成绝对定位的元素，相对于浏览器窗口进行定位。*/
+	top:30px;
+	margin:auto;
+	}
+div.top div.logo{
+	width:226px;
+	height:47px;
+	background-image:url(../images/logo.png);
+	margin-left:56px;/*外边距的左边距为56px*/
+	float:left;/*浮动居左*/
+	}
+div.top div.nav{
+	width:400px;
+	height:50px;
+	float:right;/*浮动居右*/
+	margin-right:56px;/*外边距的右边距为56px*/
+	position:relative;/*生成相对定位的元素，相对于其正常位置进行定位,position 属性的默认值：static*/
+	}
+div.top div.nav ul li{
+	list-style-type:none;/*清除无序列表前面的小黑点*/
+	float:left;/*浮动居左*/
+	margin-left:53px;/*外边距的左边距为53px*/
+	}
+div.top div.nav ul li a{
+	font-family:"微软雅黑";
+	font-size:14px;
+	line-height:50px;/*垂直居中*/
+	color:rgba(255,255,255,0.6);
+	text-shadow:3px 3px 5px #000;/*文字阴影，前两个值为阴影位置，第三个值为模糊半径，第四个值为颜色*/
+	text-decoration:none;/*清除超链接的下划线*/
+	}
+div.top div.nav ul li.rad{
+	width:60px;
+	height:30px;
+	border:1px solid rgba(255,255,255,0.5);
+	border-radius:15px;/*给一个15px的圆角边框*/
+	position:absolute;/*生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位,position 属性的默认值：static*/
+	top:9px;
+	left:-15px;
+	z-index:-1;/*改变层级关系*/
+	}
+div.top div.nav ul li.on a{
+	color:rgba(255,255,255,1);
+	}
+div.left{
+	width:100px;
+	height:300px;
+	position:fixed;/*生成绝对定位的元素，相对于浏览器窗口进行定位。*/
+	left:60px;
+	top:30%;
+	background:url("../images/nav.png") no-repeat;/*添加不重复的背景图片*/
+	}
+div.left ul{padding-top:6px;/*内边距的上边距为10px*/}
+div.left ul li{
+	list-style-type:none;/*清除无序列表前面的小黑点*/
+	font-family:"微软雅黑";
+	padding:0px 0px 55px 47px;/*内边距的上边距为0px,右边距为0px，下边距为54px，左边距为47px；padding后面跟一个值时，是设上下左右都为同一个值；padding后面跟两个值时，是设上下、左右的值；padding后面跟三个值时，是设上、左右、下的值；padding后面跟四个值时，是设上、右、下、左的值*/
+	line-height:22px;
+	font-size:12px;
+	color:#fff;
+	}
+div.left li.active{	background:url("../images/nav_cho.png") no-repeat;}
+div.pic{
+	background-repeat: no-repeat;/*不重复平铺背景图像*/
+ 	background-position: 50% 60%;/*定义背景图片的位置*/
+	background-size: 40%;/*定义背景图片的大小*/
+	position: absolute;/*生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位,position 属性的默认值：static*/
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	}
+p{
+	font-family:"微软雅黑";
+	color:#FFF;
+	left: 30%;
+    position: absolute;/*生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位,position 属性的默认值：static*/
+    z-index: 4;/*改变层级关系*/
+	top: 13%;
+    font-size: 28px;
+	}
